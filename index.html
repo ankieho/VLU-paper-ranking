@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VLU paper ranking - 2025</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <h1>VLU PAPER RANKING - 2025</h1>
+
+  <div class="search-row">
+    <label for="search-input" style="font-weight:600;align-self:center;">Search for Journal Name:</label>
+    <input type="text" id="search-input" placeholder="Type to search..." />
+    <div></div>
+  </div>
+
+  <form id="data-form" class="input-row" autocomplete="off">
+    <input type="number" id="year-input" placeholder="Year" required min="1900" max="2100" />
+    <input type="text" id="journal-name-input" placeholder="Journal's Name" required />
+    <input type="number" id="h-index-input" placeholder="H-Index" required min="0" />
+    <input type="text" id="subject-category-input" placeholder="Subject Category (SC)" required />
+    <input type="number" id="num-journals-input" placeholder="Num. J. in SC" required min="0" />
+    <input type="number" id="journal-ranking-input" placeholder="J. Ranking in SC" required min="1" />
+    <input type="number" id="quality-index-input" placeholder="Quality Index (Q)" required min="0" />
+    <button type="submit" class="add-btn">Add</button>
+  </form>
+
+  <table aria-label="Data table">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Journal Name</th>
+        <th>H-Index</th>
+        <th>Subject Category (SC)</th>
+        <th>Number of Journals in SC</th>
+        <th>Journal's Ranking in SC</th>
+        <th>Quality Index (Q)</th>
+        <th>VLU's Percent</th>
+        <th>VLU's Ranking</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <tr><td colspan="9" class="no-data">No data entered yet.</td></tr>
+    </tbody>
+  </table>
+
+  <script src="./script.js"></script>
+</body>
+</html>
