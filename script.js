@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const vluRanking = getVluRanking(entry.numJournals, entry.qualityIndex, vluPercent);
 
       return `
-        <tr>
+        <tr onclick="editEntry(${entries.indexOf(entry)})">
           <td>${entry.year}</td>
           <td>${escapeHtml(entry.journalName)}</td>
           <td>${entry.hIndex}</td>
