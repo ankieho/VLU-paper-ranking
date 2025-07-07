@@ -83,6 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }).join('');
   }
+  window.editEntry = function(index) {
+          const entry = dataEntries[index];
+          document.getElementById('year-input').value = entry.year;
+          document.getElementById('journal-name-input').value = entry.journalName;
+          document.getElementById('h-index-input').value = entry.hIndex;
+          document.getElementById('subject-category-input').value = entry.subjectCategory;
+          document.getElementById('num-journals-input').value = entry.numJournals;
+          document.getElementById('journal-ranking-input').value = entry.journalRanking;
+          document.getElementById('quality-index-input').value = entry.qualityIndex;
+  };
 
   function getVluRanking(numJournals, qualityIndex, percent) {
     // Giả định công thức ranking đơn giản cho bản demo
