@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function getVluRanking(numJournals, qualityIndex, vluPercent) {
     // Giả định công thức ranking đơn giản cho bản demo
+	let vluPercent = (entry.journalRanking / entry.numJournals) * 100;
 	let vluRanking = '';
 		if (numJournals >= 2000) {
 		  if (qualityIndex == 1) {
