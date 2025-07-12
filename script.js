@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.sort((a, b) => a.journalName.localeCompare(b.journalName));
 
     tableBody.innerHTML = entries.map(entry => {
-      const vluPercent = (entry.journalRanking / entry.numJournals) * 100;
-      const vluRanking = getVluRanking(entry.numJournals, entry.qualityIndex, vluPercent);
+      const calPercent = (entry.journalRanking / entry.numJournals) * 100;
+      const vluRanking = getVluRanking(entry.journalRanking, entry.numJournals, entry.qualityIndex);
 
       return `
         <tr onclick="editEntry(${entries.indexOf(entry)})">
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <td>${entry.numJournals}</td>
           <td>${entry.journalRanking}</td>
           <td>${entry.qualityIndex}</td>
-          <td>${vluPercent.toFixed(2)}%</td>
+          <td>${calPercent.toFixed(2)}%</td>
           <td>${vluRanking}</td>
         </tr>
       `;
@@ -94,9 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('quality-index-input').value = entry.qualityIndex;
   };
 
-  function getVluRanking(numJournals, qualityIndex, vluPercent) {
+  function getVluRanking(journalRanking, numJournals, qualityIndex) {
     // Giả định công thức ranking đơn giản cho bản demo
-	let vluPercent = (entry.journalRanking / entry.numJournals) * 100;
+	let vluPercent = (journalRanking / numJournals) * 100;
 	let vluRanking = '';
 		if (numJournals >= 2000) {
 		  if (qualityIndex == 1) {
