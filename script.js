@@ -97,14 +97,14 @@ document.addEventListener('DOMContentLoaded', () => {
   function getVluRanking(numJournals, qualityIndex, percent) {
     // Giả định công thức ranking đơn giản cho bản demo
 	let vluRanking = '';
-		if (entry.numJournals >= 2000) {
-		  if (entry.qualityIndex == 1) {
+		if (numJournals >= 2000) {
+		  if (qualityIndex == 1) {
 			if (vluPercent < 5.00) {
 			  vluRanking = 1;
 			} else if (vluPercent < 10.00) {
 			  vluRanking = 2;
 			}
-		  } else if (entry.qualityIndex == 2) {
+		  } else if (qualityIndex == 2) {
 			if (vluPercent < 18.00) {
 			  vluRanking = 3;
 			} else if (vluPercent < 30.00) {
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else if (vluPercent < 43.00) {
 			  vluRanking = 5;
 			}
-		  } else if (entry.qualityIndex == 3) {
+		  } else if (qualityIndex == 3) {
 			if (vluPercent < 56.00) {
 			  vluRanking = 6;
 			} else if (vluPercent < 69.00) {
@@ -120,19 +120,19 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else if (vluPercent < 82.00) {
 			  vluRanking = 8;
 			}
-		  } else if (entry.qualityIndex == 4) {
+		  } else if (qualityIndex == 4) {
 			if (vluPercent >= 82.00) {
 			  vluRanking = 9;
 			}
 		  }
-		} else if (entry.numJournals >= 1500 && entry.numJournals < 2000) {
-		  if (entry.qualityIndex == 1) {
+		} else if (numJournals >= 1500 && numJournals < 2000) {
+		  if (qualityIndex == 1) {
 			if (vluPercent < 6.00) {
 			  vluRanking = 1;
 			} else if (vluPercent < 11.00) {
 			  vluRanking = 2;
 			}
-		  } else if (entry.qualityIndex == 2) {
+		  } else if (qualityIndex == 2) {
 			if (vluPercent < 19.00) {
 			  vluRanking = 3;
 			} else if (vluPercent < 31.00) {
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else if (vluPercent < 44.00) {
 			  vluRanking = 5;
 			}
-		  } else if (entry.qualityIndex == 3) {
+		  } else if (qualityIndex == 3) {
 			if (vluPercent < 57.00) {
 			  vluRanking = 6;
 			} else if (vluPercent < 70.00) {
@@ -148,19 +148,19 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else if (vluPercent < 83.00) {
 			  vluRanking = 8;
 			}
-		  } else if (entry.qualityIndex == 4) {
+		  } else if (qualityIndex == 4) {
 			if (vluPercent >= 83.00) {
 			  vluRanking = 9;
 			}
 		  }
-		} else if (entry.numJournals >= 1000 && entry.numJournals < 1500) {
-		  if (entry.qualityIndex == 1) {
+		} else if (numJournals >= 1000 && numJournals < 1500) {
+		  if (qualityIndex == 1) {
 			if (vluPercent < 7.00) {
 			  vluRanking = 1;
 			} else if (vluPercent < 12.00) {
 			  vluRanking = 2;
 			}
-		  } else if (entry.qualityIndex == 2) {
+		  } else if (qualityIndex == 2) {
 			if (vluPercent < 20.00) {
 			  vluRanking = 3;
 			} else if (vluPercent < 32.00) {
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else if (vluPercent < 45.00) {
 			  vluRanking = 5;
 			}
-		  } else if (entry.qualityIndex == 3) {
+		  } else if (qualityIndex == 3) {
 			if (vluPercent < 58.00) {
 			  vluRanking = 6;
 			} else if (vluPercent < 71.00) {
@@ -176,19 +176,19 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else if (vluPercent < 84.00) {
 			  vluRanking = 8;
 			}
-		  } else if (entry.qualityIndex == 4) {
+		  } else if (qualityIndex == 4) {
 			if (vluPercent >= 84.00) {
 			  vluRanking = 9;
 			}
 		  }
-		} else if (entry.numJournals >= 500 && entry.numJournals < 1000) {
-		  if (entry.qualityIndex == 1) {
+		} else if (numJournals >= 500 && numJournals < 1000) {
+		  if (qualityIndex == 1) {
 			if (vluPercent < 8.00) {
 			  vluRanking = 1;
 			} else if (vluPercent < 13.00) {
 			  vluRanking = 2;
 			}
-		  } else if (entry.qualityIndex == 2) {
+		  } else if (qualityIndex == 2) {
 			if (vluPercent < 21.00) {
 			  vluRanking = 3;
 			} else if (vluPercent < 33.00) {
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else if (vluPercent < 46.00) {
 			  vluRanking = 5;
 			}
-		  } else if (entry.qualityIndex == 3) {
+		  } else if (qualityIndex == 3) {
 			if (vluPercent < 59.00) {
 			  vluRanking = 6;
 			} else if (vluPercent < 72.00) {
@@ -204,19 +204,19 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else if (vluPercent < 85.00) {
 			  vluRanking = 8;
 			}
-		  } else if (entry.qualityIndex == 4) {
+		  } else if (qualityIndex == 4) {
 			if (vluPercent >= 85.00) {
 			  vluRanking = 9;
 			}
 		  }
-		} else if (entry.numJournals >= 200 && entry.numJournals < 500) {
-		  if (entry.qualityIndex == 1) {
+		} else if (numJournals >= 200 && numJournals < 500) {
+		  if (qualityIndex == 1) {
 			if (vluPercent < 10.00) {
 			  vluRanking = 1;
 			} else if (vluPercent < 15.00) {
 			  vluRanking = 2;
 			}
-		  } else if (entry.qualityIndex == 2) {
+		  } else if (qualityIndex == 2) {
 			if (vluPercent < 23.00) {
 			  vluRanking = 3;
 			} else if (vluPercent < 35.00) {
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else if (vluPercent < 48.00) {
 			  vluRanking = 5;
 			}
-		  } else if (entry.qualityIndex == 3) {
+		  } else if (qualityIndex == 3) {
 			if (vluPercent < 61.00) {
 			  vluRanking = 6;
 			} else if (vluPercent < 74.00) {
@@ -232,19 +232,19 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else if (vluPercent < 87.00) {
 			  vluRanking = 8;
 			}
-		  } else if (entry.qualityIndex == 4) {
+		  } else if (qualityIndex == 4) {
 			if (vluPercent >= 87.00) {
 			  vluRanking = 9;
 			}
 		  }
-		} else if (entry.numJournals >= 50 && entry.numJournals < 200) {
-		  if (entry.qualityIndex == 1) {
+		} else if (numJournals >= 50 && numJournals < 200) {
+		  if (qualityIndex == 1) {
 			if (vluPercent < 11.00) {
 			  vluRanking = 1;
 			} else if (vluPercent < 16.00) {
 			  vluRanking = 2;
 			}
-		  } else if (entry.qualityIndex == 2) {
+		  } else if (qualityIndex == 2) {
 			if (vluPercent < 24.00) {
 			  vluRanking = 3;
 			} else if (vluPercent < 36.00) {
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else if (vluPercent < 49.00) {
 			  vluRanking = 5;
 			}
-		  } else if (entry.qualityIndex == 3) {
+		  } else if (qualityIndex == 3) {
 			if (vluPercent < 62.00) {
 			  vluRanking = 6;
 			} else if (vluPercent < 75.00) {
@@ -260,19 +260,19 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else if (vluPercent < 88.00) {
 			  vluRanking = 8;
 			}
-		  } else if (entry.qualityIndex == 4) {
+		  } else if (qualityIndex == 4) {
 			if (vluPercent >= 88.00) {
 			  vluRanking = 9;
 			}
 		  }
-		} else if (entry.numJournals < 50) {
-		  if (entry.qualityIndex == 1) {
+		} else if (numJournals < 50) {
+		  if (qualityIndex == 1) {
 			if (vluPercent < 15.00) {
 			  vluRanking = 1;
 			} else if (vluPercent < 25.00) {
 			  vluRanking = 2;
 			}
-		  } else if (entry.qualityIndex == 2) {
+		  } else if (qualityIndex == 2) {
 			if (vluPercent < 33.00) {
 			  vluRanking = 3;
 			} else if (vluPercent < 45.00) {
@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else if (vluPercent < 50.00) {
 			  vluRanking = 5;
 			}
-		  } else if (entry.qualityIndex == 3) {
+		  } else if (qualityIndex == 3) {
 			if (vluPercent < 66.00) {
 			  vluRanking = 6;
 			} else if (vluPercent < 79.00) {
@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			} else if (vluPercent < 92.00) {
 			  vluRanking = 8;
 			}
-		  } else if (entry.qualityIndex == 4) {
+		  } else if (qualityIndex == 4) {
 			if (vluPercent >= 92.00) {
 			  vluRanking = 9;
 			}
