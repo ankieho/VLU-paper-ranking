@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tableBody.innerHTML = entries.map(entry => {
       const vluPercent = (entry.journalRanking / entry.numJournals) * 100;
-      const vluRanking = getVluRanking(newEntry.numJournals, newEntry.qualityIndex, vluPercent);
+      const vluRanking = getVluRanking(entry.numJournals, entry.qualityIndex, vluPercent);
 
       return `
         <tr onclick="editEntry(${entries.indexOf(entry)})">
