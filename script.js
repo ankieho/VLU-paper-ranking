@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       dataEntries.push(newEntry);
     }
-
+    console.log('Data Entries:', dataEntries);
     renderTable(dataEntries);
     form.reset();
     document.getElementById('year-input').value = new Date().getFullYear() - 1;
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tableBody.innerHTML = entries.map(entry => {
       const vluPercent = (entry.journalRanking / entry.numJournals) * 100;
-      const vluRanking = getVluRanking(entry.numJournals, entry.qualityIndex, vluPercent);
+      const vluRanking = getVluRanking(newEntry.numJournals, newEntry.qualityIndex, vluPercent);
 
       return `
         <tr onclick="editEntry(${entries.indexOf(entry)})">
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		  }
 		}
-    return '';
+    return vluRanking;
   }
 
   function escapeHtml(text) {
