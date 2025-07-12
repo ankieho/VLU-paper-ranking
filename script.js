@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('quality-index-input').value = entry.qualityIndex;
   };
 
-  function getVluRanking(numJournals, qualityIndex, percent) {
+  function getVluRanking(numJournals, qualityIndex, vluPercent) {
     // Giả định công thức ranking đơn giản cho bản demo
 	let vluRanking = '';
 		if (numJournals >= 2000) {
